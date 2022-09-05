@@ -36,11 +36,7 @@ class BmiActivity : AppCompatActivity() {
         tvbmianda = findViewById<TextView>(R.id.tv_bmi_anda)
         tvkategorianda = findViewById<TextView>(R.id.tv_kategori_anda)
 
-        btnkuyhitung.setOnClickListener {
-            etumur.tv_umur
-            etumur.tv_tinggi_anda
-            etberatbadan.tv_berat_anda
-        }
+
 
         btnkuyhitung.setOnClickListener {
             kriteriaUmur()
@@ -60,9 +56,12 @@ class BmiActivity : AppCompatActivity() {
 
     fun  kriteriaUmur(){
 
-        val bb = etberatbadan.text.toString()
-        val umurUser = etumur.text.toString()
-        val tb = ettinggibadan.text.toString()
+        val masukinUmurNih = etumur.text.toString()
+        tvumuranda.text = masukinUmurNih
+        val masukTiggi = ettinggibadan.text.toString()
+        tvtinggianda.text = masukTiggi
+        val masukinBerat = etberatbadan.text.toString()
+        tvberatanda.text = masukinBerat
 
             var masukinUmur = etumur.text.toString().toInt()
             if (masukinUmur > 16){

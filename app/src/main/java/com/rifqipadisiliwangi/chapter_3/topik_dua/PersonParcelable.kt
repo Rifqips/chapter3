@@ -9,7 +9,8 @@ data class PersonParcelable(val nama: String?, val nim: String?, val umur: Strin
         parcel.readString(),
         parcel.readString().toString(),
         parcel.readString()
-    ) {
+    )
+    {
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
